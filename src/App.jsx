@@ -1,19 +1,23 @@
-import { React } from 'react'
-import './App.css'
-import FloatingTexts from './components/floatinsElements'
+import Navbar from './components/navbar.jsx'
+import About from './components/about.jsx'
+import Services from './components/services.jsx'
+import Hero from './components/hero.jsx'
+import Contact from './components/contact.jsx'
+import Partners from './components/partners.jsx'
+import Metodology from './components/metodology.jsx'
 
-function App() {
-
+export default function App() {
   return (
-    <section className="h-screen w-screen bg-black flex flex-col justify-center items-center relative overflow-hidden">
-       <FloatingTexts />
-      <div className="flex justify-center items-center flex-col max-w-[1100px] py-[60px] text-center">
-        <h1 className=" text-[140px] font-bold neon-text">4<span className="trevor"></span>4</h1>
-        <p className="font-mono absolute top-9 left-[42%]">Website is under construction</p>
-      </div>
-      <div className="green-glow"></div>
-    </section>
-  )
+    <div className="min-h-screen overflow-x-hidden ">
+      <Navbar />
+      <main>
+      <Hero />  
+      <Partners />
+      <Metodology />
+      <About />
+      <Services />
+      <Contact />
+      </main>
+    </div>
+  );
 }
-
-export default App
